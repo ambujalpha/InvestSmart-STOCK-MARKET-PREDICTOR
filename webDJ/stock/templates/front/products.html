@@ -1,0 +1,67 @@
+{% extends 'front/master.html' %}
+{% load static %}
+
+{% block mainblock %}
+<section class="page-section">
+    <div class="container">
+      <div class="product-item">
+        <div class="product-item-title d-flex">
+          <div class="bg-faded p-5 d-flex ml-auto rounded">
+            <h2 class="section-heading mb-0">
+              <span class="section-heading-upper">Buy n Sell</span>
+              <span class="section-heading-lower">Buy and Sell stock without any charges</span>
+            </h2>
+          </div>
+        </div>
+        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static 'front/img/products-01.jpg' %}" alt="">
+        <div class="product-item-description d-flex mr-auto">
+          <div class="bg-faded p-5 rounded">
+            <p class="mb-0">Create an account and Buy stocks of different companies and sell them at without any commission charges and get your profit in your e-wallet within 12 hours. We also transfer money in your account after KYC within 24 hours</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="product-item">
+        <div class="product-item-title d-flex">
+          <div class="bg-faded p-5 d-flex mr-auto rounded">
+            <h2 class="section-heading mb-0">
+              <span class="section-heading-upper">Technical Analysis</span>
+              <span class="section-heading-lower">Statistics-Analysis-Probability</span>
+            </h2>
+          </div>
+        </div>
+        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static 'front/img/products-02.jpg' %}" alt="">
+        <div class="product-item-description d-flex ml-auto">
+          <div class="bg-faded p-5 rounded">
+            <p class="mb-0">These words are deep and require hard work to put in stock price predictions, we have made it easy for you. Just try it!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="product-item">
+        <div class="product-item-title d-flex">
+          <div class="bg-faded p-5 d-flex ml-auto rounded">
+            <h2 class="section-heading mb-0">
+              <span class="section-heading-upper">Magic Effect</span>
+              <span class="section-heading-lower">Making predictions using Artificial Intelligence</span>
+            </h2>
+          </div>
+        </div>
+        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static 'front/img/products-03.jpg' %}" alt="">
+        <div class="product-item-description d-flex mr-auto">
+          <div class="bg-faded p-5 rounded">
+            <p class="mb-0">We don't know that Artificial Intelligence is either going to take over the world or just help us improve with it's magic effects. We are using machine learning algorithm to make prediction and we are combining them with our technical aspects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
