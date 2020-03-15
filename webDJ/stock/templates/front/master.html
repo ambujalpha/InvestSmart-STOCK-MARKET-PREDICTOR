@@ -11,7 +11,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Your Stock Your price - Start Bootstrap Theme</title>
+    {% block headblock %}
+    {% endblock %}
 
   <!-- Bootstrap core CSS -->
   <link href="{% static 'front/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -63,6 +64,7 @@
   <footer class="footer text-faded text-center py-5">
     <div class="container">
       <p class="m-0 small">Copyright @ Ambuj-Amanat-Ankit-burai-Palak</p>
+        <p>{{ site.price }}</p>
     </div>
   </footer>
 
