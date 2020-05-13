@@ -6,4 +6,5 @@ from django.conf.urls.static import static
 urlpatterns = [
 
     url(r'^$', views.home, name='home'),
+    url(r'^stock/$', views.stock, name='stock'),
 ]
