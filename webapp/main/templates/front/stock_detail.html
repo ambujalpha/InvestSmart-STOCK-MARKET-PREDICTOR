@@ -1,30 +1,35 @@
 {% extends 'front/master.html' %}
 {% load static %}
 
+{% block headblock %}
+
+    {% for i in showstock %}
+    <title>{{ site.name }} | {{ i.name }}</title>
+    {% endfor %}
+    <meta charset="utf-8">
+
+{% endblock %}
+
 {% block mainblock %}
 
+    {% for i in showstock %}
     <div class="site-section cta-big-image" id="about-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center" data-aos="fade">
-            <h2 class="section-title mb-3">Stock_details</h2>
+            <h2 class="section-title mb-3">Prediction of {{ i.name }} Stock Price</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-            <figure class="circle-bg">
-            <img src="{% static 'front/images/hero_1.jpg' %}" alt="Image" class="img-fluid">
-            </figure>
+
+            <img src="{{i.picurl}}" alt="Image" class="img-fluid">
+
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
               <h3 class="h3 mb-4 text-black">For the next great business</h3>
-              <p>Amazon is known for its disruption of well-established industries
-                  through technological innovation and mass scale.[13][14][15] It is the world's largest
-                  online marketplace, AI assistant provider, and cloud computing platform[16] as measured by revenue and
-                  market capitalization.[17] Amazon is the largest Internet company by revenue in the world.[18]
-                  It is the second largest private employer in the United States[19] and one of the world's most
-                  valuable companies..</p>
+              <p>{{i.txt}}</p>
 
             </div>
 
@@ -32,8 +37,8 @@
 
             <div class="mb-4">
               <ul class="list-unstyled ul-check success">
-                <li>Best Invest Time - 24/01/202 </li>
-                <li>Best Divest Time - 24/01/202  </li>
+                <li>Best Invest Time - {{i.invest}} </li>
+                <li>Best Divest Time - {{ i.divest }} </li>
               </ul>
 
             </div>
@@ -45,4 +50,5 @@
       </div>
     </div>
 
+{% endfor %}
 {% endblock %}

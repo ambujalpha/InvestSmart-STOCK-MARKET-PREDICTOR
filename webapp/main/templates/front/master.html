@@ -3,10 +3,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>InvestSmart</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    {% block headblock %}
+    {% endblock %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'front/fonts/icomoon/style.css' %}">
@@ -57,7 +58,7 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="home.html" class="h2 mb-0">InvestSmart<span class="text-primary">.</span> </a></h1>
+            <h1 class="mb-0 site-logo"><a href="/" class="h2 mb-0">InvestSmart<span class="text-primary">.</span> </a></h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -69,14 +70,14 @@
                   <a href="/#about-section" class="nav-link">About Us</a>
                   <ul class="dropdown">
                     <li><a href="/#team-section" class="nav-link">Team</a></li>
-                    <li class="has-children">
+                   <!-- <li class="has-children">
                       <a href="#">More Links</a>
                       <ul class="dropdown">
                         <li><a href="#">Menu One</a></li>
                         <li><a href="#">Menu Two</a></li>
                         <li><a href="#">Menu Three</a></li>
                       </ul>
-                    </li>
+                    </li>-->
                   </ul>
                 </li>
 

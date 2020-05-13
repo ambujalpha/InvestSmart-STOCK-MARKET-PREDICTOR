@@ -1,6 +1,13 @@
 {% extends 'front/master.html' %}
 {% load static %}
 
+    {% block headblock %}
+
+        <title>{{ site.name }} | Home</title>
+        <meta charset="utf-8">
+
+    {% endblock %}
+
     {% block mainblock %}
          <div class="site-blocks-cover overlay" style="background-image: url({% static 'front/images/hero_2.jpg' %});" data-aos="fade" id="home-section">
 
@@ -35,7 +42,7 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
             <figure class="circle-bg">
-            <img src="{% static 'front/images/hero_1.jpg' %}" alt="Image" class="img-fluid">
+            <img src="{% static 'front/images/about.jpg' %}" alt="Image" class="img-fluid">
             </figure>
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
@@ -212,10 +219,10 @@
                   <li><a href="#"><span class="icon-linkedin"></span></a></li>
                   <li><a href="#"><span class="icon-instagram"></span></a></li>
                 </ul>
-                <img src="{% static 'front/images/person_5.jpg' %}" alt="Image" class="img-fluid">
+                <img style="width: 250px; height: 250px" src="{% static 'front/images/Aditya.jpg' %}" alt="Image" class="img-fluid">
               </figure>
               <div class="p-3">
-                <h3>Kaiara Spencer</h3>
+                <h3>Aditya Baurai</h3>
                 <span class="position">Product Manager</span>
               </div>
             </div>
@@ -230,10 +237,10 @@
                   <li><a href="#"><span class="icon-linkedin"></span></a></li>
                   <li><a href="#"><span class="icon-instagram"></span></a></li>
                 </ul>
-                <img src="{% static 'front/images/person_7.jpg' %}" alt="Image" class="img-fluid">
+                <img style="width: 250px; height: 250px" src="{% static 'front/images/Amanat.jpg' %}" alt="Image" class="img-fluid">
               </figure>
               <div class="p-3">
-                <h3>Ben Thompson</h3>
+                <h3>Amanat Mishra</h3>
                 <span class="position">Product Manager</span>
               </div>
             </div>
@@ -248,10 +255,10 @@
                   <li><a href="#"><span class="icon-linkedin"></span></a></li>
                   <li><a href="#"><span class="icon-instagram"></span></a></li>
                 </ul>
-                <img src="{% static 'front/images/person_1.jpg' %}" alt="Image" class="img-fluid">
+                <img style="width: 250px; height: 250px" src="{% static 'front/images/Ambuj.jpeg' %}" alt="Image" class="img-fluid">
               </figure>
               <div class="p-3">
-                <h3>Kaiara Spencer</h3>
+                <h3>Ambuj Jain</h3>
                 <span class="position">Product Manager</span>
               </div>
             </div>
@@ -266,10 +273,10 @@
                   <li><a href="#"><span class="icon-linkedin"></span></a></li>
                   <li><a href="#"><span class="icon-instagram"></span></a></li>
                 </ul>
-                <img src="{% static 'front/images/person_3.jpg' %}" alt="Image" class="img-fluid">
+                <img style="width: 250px; height: 250px" src="{% static 'front/images/Palak.jpg' %}" alt="Image" class="img-fluid">
               </figure>
               <div class="p-3">
-                <h3>Ben Thompson</h3>
+                <h3>Palak Mendiretta</h3>
                 <span class="position">Product Manager</span>
               </div>
             </div>
@@ -284,10 +291,10 @@
                   <li><a href="#"><span class="icon-linkedin"></span></a></li>
                   <li><a href="#"><span class="icon-instagram"></span></a></li>
                 </ul>
-                <img src="{% static 'front/images/person_4.jpg' %}" alt="Image" class="img-fluid">
+                <img style="width: 250px; height: 250px" src="{% static 'front/images/Ankit.jpg' %}" alt="Image" class="img-fluid">
               </figure>
               <div class="p-3">
-                <h3>Chris Stewart</h3>
+                <h3>Ankit Tiwari</h3>
                 <span class="position">Product Manager</span>
               </div>
             </div>

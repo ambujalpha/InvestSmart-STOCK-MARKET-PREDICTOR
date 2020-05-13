@@ -1,6 +1,13 @@
 {% extends 'front/master.html' %}
 {% load static %}
 
+{% block headblock %}
+
+        <title>{{ site.name }} | Stock</title>
+        <meta charset="utf-8">
+
+{% endblock %}
+
 {% block mainblock %}
 
     <div class="site-section cta-big-image" id="about-section">
@@ -27,9 +34,9 @@
 
             <div class="mb-4">
               <ul class="list-unstyled ul-check success">
-                <li><a href="/stock/details/">Tata Global</a> </li>
-                <li><a href="/stock/details/">Amazon</a> </li>
-                <li><a href="/stock/details/">Maruti</a> </li>
+                {% for i in allstocks %}
+                    <li><a href="{% url 'stock_detail' word=i.name %}">{{i.name}}</a> </li>
+                {% endfor %}
               </ul>
 
             </div>
