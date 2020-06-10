@@ -3,12 +3,49 @@
 
 {% block headblock %}
 
-        <title>{{ site.name }} | Stock</title>
+        <title>{{ site.name }} | Consulting</title>
         <meta charset="utf-8">
 
 {% endblock %}
 
 {% block mainblock %}
 
+    <div class="site-section cta-big-image" id="about-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title mb-3">Business Consulting</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+            <img src="{% static 'front/images/about.jpg' %}" alt="Image" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3 class="h3 mb-4 text-black">For the next genration investment</h3>
+              <p>InvestSmart is founded by students of PDPM IIITDM Jabalpur in 2020. Here one can use Artificial Intelligence to make predcitions and invest smartly.</p>
+
+            </div>
+
+
+
+            <div class="mb-4">
+              <ul class="list-unstyled ul-check success">
+                <li>We will teach you abour stock</li>
+                <li>We will make you stock market expert</li>
+                <li>We provide you various other services</li>
+              </ul>
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
 
 {% endblock %}
