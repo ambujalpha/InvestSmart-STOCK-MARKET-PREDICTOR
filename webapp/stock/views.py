@@ -44,7 +44,13 @@ def stock_detail(request, word):
     X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
     predicted_stock_price = loaded_model.predict(X_test)
     predicted_stock_price = sc.inverse_transform(predicted_stock_price)
+    df1 = pd.DataFrame(real_stock_price)
+    df2 = pd.DataFrame(predicted_stock_price)
+    df3 = pd.DataFrame(range(0, 20, 1))
+    df4 = pd.concat([df3, df1, df2], axis=1)
+    df = df4.values.tolist()
+
 
     site = Main.objects.get(pk=2)
     showstock = Stock.objects.filter(name=word)
-    return render(request, 'front/stock_detail.html', {'site': site, 'showstock': showstock, 'real_stock_price': real_stock_price, 'predicted_stock_price':predicted_stock_price})
+    return render(request, 'front/stock_detail.html', {'site': site, 'showstock': showstock, 'df':df})
