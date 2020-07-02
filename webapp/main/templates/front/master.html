@@ -139,8 +139,8 @@
 
 
 
-            <form action="#" class="p-5 bg-white">
-
+            <form action="{% url 'contact_form' %}" method="POST" class="p-5 bg-white">
+            {% csrf_token %}
               <h2 class="h4 text-black mb-5">Contact Form</h2>
 
               <div class="row form-group">
