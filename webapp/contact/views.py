@@ -28,6 +28,7 @@ def contact_form(request):
 
         b = ContactForm(fname=fname,lname=lname,email=email,subject=subject,date=today,time=time,message=message)
         b.save()
+
         return render(request, 'front/msgbox.html')
 
     return render(request,'front/msgbox.html')
