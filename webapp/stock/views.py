@@ -50,7 +50,18 @@ def stock_detail(request, word):
     df4 = pd.concat([df3, df1, df2], axis=1)
     df = df4.values.tolist()
 
+    ratio = -1
+    it = 0
+    dt = 0
+    n = len(predicted_stock_price)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if ((predicted_stock_price[j] / predicted_stock_price[i]) > ratio):
+                ratio = predicted_stock_price[j] / predicted_stock_price[i]
+                it = i
+                dt = j
+    ratio=int(ratio*10000)
 
     site = Main.objects.get(pk=2)
     showstock = Stock.objects.filter(name=word)
-    return render(request, 'front/stock_detail.html', {'site': site, 'showstock': showstock, 'df':df})
+    return render(request, 'front/stock_detail.html', {'site': site, 'showstock': showstock, 'df':df, 'ratio':ratio, 'it':it, 'dt':dt})

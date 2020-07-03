@@ -86,33 +86,12 @@
             </div>
 
 
-            <div class="row form-group">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">Invest Time</label>
-                  <input type="text" name="fname" id="fname" class="form-control">
-                </div>
-                <div class="col-md-6">
-                  <label class="text-black" for="lname">Invest Amount</label>
-                  <input type="text" name="lname" id="lname" class="form-control">
-                </div>
-            </div>
-
-            <div class="row form-group">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">Divest Time</label>
-                  <input type="text" name="fname" id="fname" class="form-control">
-                </div>
-                <div class="col-md-6">
-                  <label class="text-black" for="lname">Divest Amount</label>
-                  <input type="text" name="lname" id="lname" class="form-control">
-                </div>
-            </div>
-
             <div class="mb-4">
               <ul class="list-unstyled ul-check success">
-                <li>Best Invest Time - {{i.invest}} </li>
-                <li>Best Divest Time - {{ i.divest }} </li>
+                <li>Best Invest Time - {{ it }} </li>
+                <li>Best Divest Time - {{ dt }} </li>
               </ul>
+                <p><b>For an amount of Rs10000 investment you would be getting approx Rs{{ ratio }}</b></p>
 
             </div>
 
