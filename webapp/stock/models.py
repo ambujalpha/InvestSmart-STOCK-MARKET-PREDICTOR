@@ -6,8 +6,6 @@ class Stock(models.Model):
 
     name = models.CharField(max_length=30)
     txt = models.TextField(default="-")
-    picname = models.TextField(default="-")
-    picurl = models.TextField(default="-")
 
     def __str__(self):
         return self.name
