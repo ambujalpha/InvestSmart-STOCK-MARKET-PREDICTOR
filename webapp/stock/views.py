@@ -17,33 +17,85 @@ def stock(request):
 
 def stock_detail(request, word):
 
-    dataset_train = pd.read_csv('media/Google_Stock_Price_Train.csv')
-    training_set = dataset_train.iloc[:, 1:2].values
-    sc = MinMaxScaler(feature_range=(0, 1))
-    training_set_scaled = sc.fit_transform(training_set)
+    print(word)
+    real_stock_price = 0
+    predicted_stock_price = 0
 
-    json_file = open('media/model_lstm_google.json', 'r')
-    loaded_model_json = json_file.read()
-    json_file.close()
-    loaded_model = model_from_json(loaded_model_json)
-    loaded_model.load_weights("media/model_lstm_google.h5")
-    print("Loaded model from disk")
-    loaded_model.compile(loss='mean_squared_error', optimizer='adam')
+    TIME_STEP = 7
+    DAYS = 20
 
-    dataset_test = pd.read_csv('media/Google_Stock_Price_Test.csv')
-    real_stock_price = dataset_test.iloc[:, 1:2].values
-    dataset_total = pd.concat((dataset_train['Open'], dataset_test['Open']), axis=0)
-    # at each day of financial day, we need the prices of prev 60 days
-    inputs = dataset_total[len(dataset_total) - len(dataset_test) - 60:].values
-    inputs = inputs.reshape(-1, 1)
-    inputs = sc.transform(inputs)
-    X_test = []
-    for i in range(60, 80):
-        X_test.append(inputs[i - 60:i, 0])
-    X_test = np.array(X_test)
-    X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
-    predicted_stock_price = loaded_model.predict(X_test)
-    predicted_stock_price = sc.inverse_transform(predicted_stock_price)
+    if(word=="AMD"):
+
+        dataset = pd.DataFrame(pd.read_csv('media/AMD/AMD.csv'))
+
+        dataset.drop(["Date", "High", "Low", "Close", "Volume", "Adj Close"], axis=1, inplace=True)
+        dataset = dataset.values
+
+        scaler = MinMaxScaler(feature_range=(0, 1))
+        dataset_scaled = scaler.fit_transform(dataset)
+
+        def dataset_split(dataset):
+            train = dataset[0: len(dataset) - DAYS]
+            val = dataset[len(dataset) - DAYS - TIME_STEP: len(dataset)]
+            return train, val
+
+        train, val = dataset_split(dataset_scaled)
+
+        val_x, val_y = [], []
+        for i in range(TIME_STEP, val.shape[0]):
+            val_x.append(val[i - TIME_STEP: i, 0])
+            val_y.append(val[i, 0])
+        val_x, val_y = np.array(val_x), np.array(val_y)
+
+        val_x = np.reshape(val_x, (val_x.shape[0], val_x.shape[1], 1))
+
+        json_file = open('media/AMD/AMD_model.json', 'r')
+        loaded_model_json = json_file.read()
+        json_file.close()
+        loaded_model = model_from_json(loaded_model_json)
+        loaded_model.load_weights("media/AMD/AMD_model.h5")
+        print("Loaded model from disk")
+        loaded_model.compile(loss='mean_squared_error', optimizer='adam')
+
+        real_prices = val[TIME_STEP:]
+        real_prices = scaler.inverse_transform(real_prices)
+        real_stock_price=real_prices
+
+        predicted_prices = loaded_model.predict(val_x)
+        predicted_prices = scaler.inverse_transform(predicted_prices)
+        predicted_stock_price=predicted_prices
+
+
+    else:
+
+        dataset_train = pd.read_csv('media/Google_Stock_Price_Train.csv')
+        training_set = dataset_train.iloc[:, 1:2].values
+        sc = MinMaxScaler(feature_range=(0, 1))
+        training_set_scaled = sc.fit_transform(training_set)
+
+        json_file = open('media/model_lstm_google.json', 'r')
+        loaded_model_json = json_file.read()
+        json_file.close()
+        loaded_model = model_from_json(loaded_model_json)
+        loaded_model.load_weights("media/model_lstm_google.h5")
+        print("Loaded model from disk")
+        loaded_model.compile(loss='mean_squared_error', optimizer='adam')
+
+        dataset_test = pd.read_csv('media/Google_Stock_Price_Test.csv')
+        real_stock_price = dataset_test.iloc[:, 1:2].values
+        dataset_total = pd.concat((dataset_train['Open'], dataset_test['Open']), axis=0)
+        # at each day of financial day, we need the prices of prev 60 days
+        inputs = dataset_total[len(dataset_total) - len(dataset_test) - 60:].values
+        inputs = inputs.reshape(-1, 1)
+        inputs = sc.transform(inputs)
+        X_test = []
+        for i in range(60, 80):
+            X_test.append(inputs[i - 60:i, 0])
+        X_test = np.array(X_test)
+        X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
+        predicted_stock_price = loaded_model.predict(X_test)
+        predicted_stock_price = sc.inverse_transform(predicted_stock_price)
+
     df1 = pd.DataFrame(real_stock_price)
     df2 = pd.DataFrame(predicted_stock_price)
     df3 = pd.DataFrame(range(0, 20, 1))
@@ -61,7 +113,6 @@ def stock_detail(request, word):
                 it = i
                 dt = j
     ratio=int(ratio*10000)
-
     site = Main.objects.get(pk=2)
     showstock = Stock.objects.filter(name=word)
     return render(request, 'front/stock_detail.html', {'site': site, 'showstock': showstock, 'df':df, 'ratio':ratio, 'it':it, 'dt':dt})
