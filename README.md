@@ -83,7 +83,7 @@ InvestSmart and it helps people invest smartlyFirstly, the number of various exa
 The website of Technological Stock Market Prediction has on its front page options to go to
 services, know about the service, read testimonials, go to the home page, contact or stocks.
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(159).png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot(159).png)
 
 From the front page, one navigates to the about us page which explains how InvestSmart works in a
 simplified manner.
