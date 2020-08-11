@@ -1,6 +1,7 @@
 # STOCK-MARKET-PREDICTOR
 
 ![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/about.jpg)
+
 # (I) Introduction : 
 
 Business and finance sector is today the leader of the world's economy, stock market trading is a
@@ -21,28 +22,7 @@ trends’ information, thus resulting in effective profits
 
 # (II) Dataset Used : 
 
-Apple orchards in the U.S. are under constant threat from a large number of pathogens and insects. Appropriate and timely deployment of disease management depends on early disease detection. Incorrect and delayed diagnosis can result in either excessive or inadequate use of chemicals, with increased production costs, environmental, and health impacts. We have manually captured 3,651 high-quality, real-life symptom images of multiple apple foliar diseases, with variable illumination, angles, surfaces, and noise. A subset, expert-annotated to create a pilot dataset for apple scab, cedar apple rust, and healthy leaves, was made available to the Kaggle community for 'Plant Pathology Challenge'; part of the Fine-Grained Visual Categorization (FGVC) workshop at CVPR 2020 (Computer Vision and Pattern Recognition). 
-
-**https://arxiv.org/abs/2004.11958** 
-
-The dataset is uploaded on my google drive and can also be accessed on Kaggle. Following are the links : 
-* Kaggle :  *https://www.kaggle.com/c/plant-pathology-2020-fgvc7/data*
-* G-Drive : *https://drive.google.com/drive/folders/1IosfDui0TSxy22WQJuN8hYNtQWt5ocXY?usp=sharing* 
-
-The dataset composed of about :
-* 1,821 training images. Each image belonged to either of the mentioned catregory : 
-  * Healthy
-  * Multiple Diseased
-  * Rust
-  * Scab
-* 1,821 testing images take from the same source distribution. Our goal was to classify these images into either of the four aforementioned classes.
-
-Some sample images from the training dataset : 
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/sample1.jpg)
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/sample2.jpg)
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/sample3.jpg)
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/sample4.jpg)
+Data Set of Google, AMD and Tesla was used.
 
 # (III) Libraries used :
 
