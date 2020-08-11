@@ -1,7 +1,6 @@
 # STOCK-MARKET-PREDICTOR
 
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/promotional_pic.webp)
-
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/about.jpg)
 # (I) Introduction : 
 
 Business and finance sector is today the leader of the world's economy, stock market trading is a
@@ -51,20 +50,17 @@ Some sample images from the training dataset :
 
 Fundamental package for scientific computing in Python3, helping us in creating and managing n-dimensional tensors. A vector can be regarded as a 1-D tensor, matrix as 2-D, and so on. 
 
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/tensor.jpg)
-
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/tree/master/Images_for_readme/tensor.jpg)
 ## Matplotlib :
 
 A Python3 plotting library used for data visualization.
 
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/visualize.webp)
-
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/tree/master/Images_for_readme/visualize.webp)
 ## Tensorflow-Keras :
 
 Is an open source deep learning framework for dataflow and differentiable programming. It’s created and maintained by Google.
 
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/tf%20loves%20keras.png)
-
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/tree/master/Images_for_readme/tf%20loves%20keras.png)
 ## Pandas :
 Used for data manipulation and analysis. In particular, it offers data structures and operations for
 manipulating numerical tables and time series.
@@ -73,6 +69,8 @@ manipulating numerical tables and time series.
 Scikit-learn is a free software machine learning library for the Python
 programming language. It features various classification, regression and clustering
 algorithms including support vector machines and many more.
+
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/tree/master/Images_for_readme/sklearn.png)
 
 # (IV) Exploratory Data Analysis(EDA) : 
 
