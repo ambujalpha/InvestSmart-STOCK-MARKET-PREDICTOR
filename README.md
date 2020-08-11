@@ -88,7 +88,7 @@ services, know about the service, read testimonials, go to the home page, contac
 From the front page, one navigates to the about us page which explains how InvestSmart works in a
 simplified manner.
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(160).png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%20(160).png)
 
 Next, the user is directed to various services offered by InvestSmart which are
     I. Business Consulting
@@ -98,7 +98,7 @@ Next, the user is directed to various services offered by InvestSmart which are
     V. Financial Investment
     VI. Financial Management
  
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(161).png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%20(161).png)
 
 As a prototype, the Stock Market Prediction page is ready as of now. With datasets from companies
 like Amazon, Google & Data Global, the website accurately predicts the stock of these companies
