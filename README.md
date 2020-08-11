@@ -50,17 +50,16 @@ Some sample images from the training dataset :
 
 Fundamental package for scientific computing in Python3, helping us in creating and managing n-dimensional tensors. A vector can be regarded as a 1-D tensor, matrix as 2-D, and so on. 
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/tree/master/Images_for_readme/tensor.jpg)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/tensor.jpg)
 ## Matplotlib :
 
 A Python3 plotting library used for data visualization.
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/tree/master/Images_for_readme/visualize.webp)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/visualize.webp)
 ## Tensorflow-Keras :
-
 Is an open source deep learning framework for dataflow and differentiable programming. It’s created and maintained by Google.
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/tree/master/Images_for_readme/tf%20loves%20keras.png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/tf%20loves%20keras.png)
 ## Pandas :
 Used for data manipulation and analysis. In particular, it offers data structures and operations for
 manipulating numerical tables and time series.
@@ -70,40 +69,79 @@ Scikit-learn is a free software machine learning library for the Python
 programming language. It features various classification, regression and clustering
 algorithms including support vector machines and many more.
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/tree/master/Images_for_readme/sklearn.png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/sklearn.png)
 
-# (IV) Exploratory Data Analysis(EDA) : 
+# (IV) Website Overview : 
 
-When we’re getting started with a machine learning (ML) project, one critical principle to keep in mind is that data is everything. It is often said that if ML is the rocket engine, then the fuel is the (high-quality) data fed to ML algorithms. However, deriving truth and insight from a pile of data can be a complicated and error-prone job. To have a solid start for our ML project, it always helps to analyze the data up front.
+Stocks are important to a business because they can help the corporation quickly gain a lot of capital,
+raise the prestige of the company with the public since people can now invest in the company, and
+allow the initial investors to sell off shares and earn money on their investments. We provide an
+efficient solution for easy investment in the stock market so that a layman can also benefit without
+having prior knowledge of technicalities that a stock market carries. The Website is named as
+InvestSmart and it helps people invest smartlyFirstly, the number of various examples belonging to each class were identified and plotted.
 
-During EDA, it’s important that we get a deep understanding of:
+The website of Technological Stock Market Prediction has on its front page options to go to
+services, know about the service, read testimonials, go to the home page, contact or stocks.
 
-* The **properties of the data**, such as schema and statistical properties;
-* The **quality of the data**, like missing values and inconsistent data types;
-* The **predictive power of the data**, such as correlation of features against target.
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(159).png)
 
-Firstly, the number of various examples belonging to each class were identified and plotted.
+From the front page, one navigates to the about us page which explains how InvestSmart works in a
+simplified manner.
 
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/eda_01.png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(160).png)
 
-Secondly, the color channel distributions were analyzed for the images from the dataset and plotted using seaborn : 
+Next, the user is directed to various services offered by InvestSmart which are
+    I. Business Consulting
+    II. Stock Market Prediction
+    III. Market Analysis
+    IV. User Monitoring
+    V. Financial Investment
+    VI. Financial Management
+ 
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(161).png)
 
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/eda_02.png)
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/eda_03.png)
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/eda_04.png)
+As a prototype, the Stock Market Prediction page is ready as of now. With datasets from companies
+like Amazon, Google & Data Global, the website accurately predicts the stock of these companies
+using the LSTM method.
 
-**Inference drawn** : 
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(166).png)
 
-* Red channel has positive skew, meaning the values are more concentrated at intensities lower than mean(somewhere around 90).
-* Green channel is negative skew, meaning the values are more concentrated at intentities higher than mean(somewhere in the range 130-150). This also means that green channel is more pronounced than red in the sample image set; and thereby the whole data set as they come from the same distribution. This makes sense as images are that of leaves!
-Similarily, blue channel has a slight positive skew and is very well distributed.
-* The distribution of red and green color channels appears to be mesokurtic, aka normally distributed having k = 0 whereas the blue one appears to be relatively platykurtic having k < 0. Therefore out of the three colors, blue channel appears to be the most different one(relative outlier in the RGB color space).
+On clicking upon a company, In this case an american semiconductor manufacturing company
+AMD, the user is directed to a page displaying Company information, current stock values and
+predictions using the LSTM model. The progress includes embedding graphs to the website with
+better accuracy. The website also predicts the best time to invest and divest in a short interval of
+days.
 
-Post this, a sample image is randomly taken on which we will test fire the coming functions in the **Image Processing** segment.
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(168).png)
 
-Sample image : 
+The below two pictures show the real stock price and predicted stock price for google along with the
+best invest & divest periods. It also gives you an example showing how much money you will get if
+you invest a certain amount in a certain stock.
 
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/sample_image.png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(167).png)
+
+Tesla, Inc. is an American electric vehicle and clean energy company based in Palo Alto, California.
+The company specializes in electric vehicle manufacturing, battery energy storage from home to grid
+scale and, through its acquisition of SolarCity, solar panel and solar roof tile manufacturing.
+
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(169).png)
+
+Testimonials page
+
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(162).png)
+
+This page comprises a form which users need to fill if they want assistance or they have any
+complaints. It collects users’ data such as Name, contact details, reason of query, etc.
+
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(164).png)
+
+Teams Page
+
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(163).png)
+
+footer section
+
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(165).png)
 
 # (V) Image Processing : 
 
