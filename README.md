@@ -104,7 +104,7 @@ As a prototype, the Stock Market Prediction page is ready as of now. With datase
 like Amazon, Google & Data Global, the website accurately predicts the stock of these companies
 using the LSTM method.
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(166).png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%20(166).png)
 
 On clicking upon a company, In this case an american semiconductor manufacturing company
 AMD, the user is directed to a page displaying Company information, current stock values and
@@ -112,208 +112,75 @@ predictions using the LSTM model. The progress includes embedding graphs to the 
 better accuracy. The website also predicts the best time to invest and divest in a short interval of
 days.
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(168).png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%20(168).png)
 
 The below two pictures show the real stock price and predicted stock price for google along with the
 best invest & divest periods. It also gives you an example showing how much money you will get if
 you invest a certain amount in a certain stock.
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(167).png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%20(167).png)
 
 Tesla, Inc. is an American electric vehicle and clean energy company based in Palo Alto, California.
 The company specializes in electric vehicle manufacturing, battery energy storage from home to grid
 scale and, through its acquisition of SolarCity, solar panel and solar roof tile manufacturing.
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(169).png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%20(169).png)
 
 Testimonials page
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(162).png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%20(162).png)
 
 This page comprises a form which users need to fill if they want assistance or they have any
 complaints. It collects users’ data such as Name, contact details, reason of query, etc.
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(164).png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%20(164).png)
 
 Teams Page
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(163).png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%20(163).png)
 
 footer section
 
-![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%(165).png)
+![](https://github.com/ambujalpha/STOCK-MARKET-PREDICTOR/blob/master/Images_for_readme/Screenshot%20(165).png)
 
-# (V) Image Processing : 
+# (V) Results : 
 
-## Image Denoising : 
+## Learning based website for Stock Investment : 
 
-Many image smoothing techniques like Gaussian Blurring, Median Blurring etc were good to some extent in removing small quantities of noise. In those techniques, we took a small neighbourhood around a pixel and performed some operations like gaussian weighted average, median of the values etc to replace the central element. In short, noise removal at a pixel was local to its neighbourhood.
+Users can make their IDs on the website and
+go through our services section to learn more about Business Consulting, Stock Market
+Prediction, Market Analysis, User Monitoring, Financial Investment and Financial
+Management. Thus providing a trustworthy platform to the users to invest their money to
+achieve their financial goal
 
-There is a property of noise. Noise is generally considered to be a random variable with zero mean.
+## Predicting stock values using Machine learning : 
 
-Suppose we hold a static camera to a certain location for a couple of seconds. This will give us plenty of frames, or a lot of images of the same scene. Then averaging all the frames, we compare the final result and first frame. Reduction in noise would be easily observed.
+The project is implemented LSTM using
+Keras API of google’s Tensorflow to predict values of stock while training the algorithm on
+past data. We concentrated on predicting the trend observed in the value of a stock for the
+next 20 days from the day of prediction. For now we are covering 3 companies which are
+AMD Inc., Google LLC and Tesla Inc. For this different python libraries were used as stated
+above in the report
 
-So idea is simple, we need a set of similar images to average out the noise. Considering a small window (say 5x5 window) in the image, chance is large that the same patch may be somewhere else in the image. Sometimes in a small neighbourhood around it. Hence, using these similar patches together averaging them can lead to an efficient denoised image.
+## User friendly output :
 
-This method is Non-Local Means Denoising. It takes more time compared to blurring techniques, but the result are very satisfying.
+The most challenging aspect of the project was to generate an efficient
+output system that is one, user friendly and easily understandable. For this purpose, after our
+prediction is completed for a certain company, the web page will also display the best
+possible scenarios that when a user and Invest and Divest to gain maximum profit. This
+allows the users to clarify what these graphs mean and what challenges are expected to face
+to avoid losses.
 
-Denoising illustration :
+# (VI) Conclusions :
 
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/lena_denoised.png)
+We were able to produce results which are consistent with the methodology proposed. Mainy the
+focus was to integrate the machine learning algorithms with our website for the completion of this
+project. This provides a powerful tool in the hands of a layman to observe predicted stocks and
+invest accordingly. A user friendly terminal which shows when to invest and when to divest gives a
+sense of trust to these predicted values. It is important to note that the results produced are likely to
+be the trend in the next 20 days. That explains that in between this time period there might be days
+which are not in resonance with the result but the end result is surely accurate to predict the trend.
 
-Following was the output when this function was test fired on our sample image : 
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/denoised_sample.png)
-
-## Edge Detection Using Sobel Filter : 
-
-Edge detection is one of the fundamental operation in image processing. Using this, we can reduce the amount of pixels while maintaining the structural aspect of the images.
-
-The basic operation involved behind edge detection is called Convolution and is illustrated below : 
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/edge_detection_sobel.png)
-
-Edges can be detected using various kinds of filters.
-
-* First derivative based Sobel filter(for thicker edges)
-* Second derivative based Laplacian filter(for finer edges)
-
-Here, we want to consider the area containing only the leaf, while ignoring the background green. Hence, we use Sobel filter to identify the prominent edge of the leaf.
-
-Following was the output when this function was test fired on our sample image :
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/sobel_results.png)
-
-Using sobel filter we found the edges, however for further pre-processing we aim to consider only the area of the leaf, that is the fine textured area we see in the gradient images. For that, we will use a much powerful inbuilt function of open-CV called Canny(). This function will return the edge coordinates.
-
-Entire read is available on the OpenCV webpage :
-
-*https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_canny/py_canny.html#canny*
-
-## Canny Edge Detector : 
-
-The Canny filter is a multi-stage edge detector. It uses a filter based on the derivative of a Gaussian in order to compute the intensity of the gradients.The Gaussian reduces the effect of noise present in the image. Then, potential edges are thinned down to 1-pixel curves by removing non-maximum pixels of the gradient magnitude. Finally, edge pixels are kept or removed using hysteresis thresholding on the gradient magnitude.
-
-The Canny has three adjustable parameters: the width of the Gaussian (the noisier the image, the greater the width), and the low and high threshold for the hysteresis thresholding.
-
-The Canny edge detection algorithm is composed of 5 steps:
-
-* Noise reduction
-* Gradient calculation
-* Non-maximum suppression
-* Double threshold
-* Edge Tracking by Hysteresis
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/harry%20potter.png)
-
-* **Noise Reduction** - One way to get rid of the noise on the image, is by applying Gaussian blur to smooth it. To do so, image convolution technique is applied with a Gaussian Kernel (3x3, 5x5, 7x7 etc…). The kernel size depends on the expected blurring effect. Basically, the smallest the kernel, the less visible is the blur.
-* **Gradient Calculation** - The Gradient calculation step detects the edge intensity and direction by calculating the gradient of the image using edge detection operators.
-The result is almost the expected one, but we can see that some of the edges are thick and others are thin. Non-Max Suppression step will help us mitigate the thick ones.
-* **Non-Maximum Supression** - Ideally, the final image should have thin edges. Thus, we must perform non-maximum suppression to thin out the edges.
-* **Double Threshold** - The double threshold step aims at identifying 3 kinds of pixels: strong, weak, and non-relevant: **Strong pixels** are pixels that have an intensity so high that we are sure they contribute to the final edge. **Weak pixels** are pixels that have an intensity value that is not enough to be considered as strong ones, but yet not small enough to be considered as non-relevant for the edge detection. **Other pixels** are considered as non-relevant for the edge.
-
-Therefore, the significance of having two values in double threshold :
- - High threshold is used to identify the strong pixels (intensity higher than the high threshold)
- - Low threshold is used to identify the non-relevant pixels (intensity lower than the low threshold)
- - All pixels having intensity between both thresholds are flagged as weak and the Hysteresis mechanism (next step) will help us identify the ones that could be considered as strong and the ones that are considered as non-relevant.
-
-* **Hysterisis** - Based on the threshold results, the hysteresis consists of transforming weak pixels into strong ones, if and only if at least one of the pixels around the one being processed is a strong one. We will be using OpenCV's implementation of Canny edge detection. This was the theory involved behind the entire process.
-
-Further information can be found on OpenCV's documentation : *https://docs.opencv.org/trunk/da/d22/tutorial_py_canny.html*
-
-Following was the output when this function was test fired on our sample image :
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/canny.png)
-
-## ROI and Edge ROI Image : 
-
-Using the canny version, we find our region of interest and therefore crop some fraction of the image. This reduces the processing data to some extent per image.
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/roi_and_edge.png)
-
-## Local Histogram Equalization : 
-
-**First of all, why can we not apply histogram equalization directly to an RGB image?**
-
-Histogram equalization is a non-linear process. Channel splitting and equalizing each channel separately is incorrect. Equalization involves intensity values of the image, not the color components. So for a simple RGB color image, histogram equalization cannot be applied directly on the channels. It needs to be applied in such a way that the intensity values are equalized without disturbing the color balance of the image. So, the first step is to convert the color space of the image from RGB into one of the color spaces that separates intensity values from color components. Some of the possible options are HSV/HLS, YUV, YCbCr, etc. YCbCr is preferred as it is designed for digital images. Perform histogram equalization on the intensity plane Y. Now convert the resultant YCbCr image back to RGB.
-
-(Excerpt taken from :
-
-*https://prateekvjoshi.com/2013/11/22/histogram-equalization-of-rgb-images/* )
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/histogram__result.png)
-
-## Image Segmentation(Half-Toned Images) : Otsu's Binarization 
-
-In global thresholding, we used an arbitrary chosen value as a threshold. In contrast, Otsu's method avoids having to choose a value and determines it automatically. We will apply Otsu's binarization segmentation method on the histogram equalized image obtained in the previous stage.
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/otsu.png)
-
-## Image Segmentation(Colored Images) : K-means Clustering
-
-In the previous section we explored image segmentation using Otsu's Binarization. However, this is applied normally on half toned, that is binary(black and white) images. In this section, we will explore a Machine Learning technique called K-means clustering to segment the different areas of the image.
-
-Once again, the operation will be performed on the histogram equalized image of plant leaf.
-
-K-means is mostly useful for applications like image compression or object recognition, because for these types of applications, it is inefficient to process the whole image.
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/kmeans.png)
-
-# (VI) Handling Imbalanced Dataset :
-
-In Exploratory Data Analysis, we plotted a pie chart depticting number of classes in the training data set. It was observed that the 'multiple diseased' class was in minority, hence creating an imbalance between the class distributions. In order to cater that, we will be using **SMOTE algorithm** to try and increase the minority class in our data set.
-
-**SMOTE stands for Synthetic Minority Oversampling Technique**.
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/SMOTE.png)
-
-This algorithm aims to balance class distribution by randomly increasing minority class examples by replicating them. SMOTE synthesizes new minority instances between existing minority instances.
-
-An amazing video explaining it can be found on YouTube : *https://www.youtube.com/watch?v=FheTDyCwRdE*
-
-**Output after applying SMOTE** : 
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/SMOTE_output.png) 
-
-Now, it's a well balanced dataset :-)
-
-# (VII) Transfer Learning with Fine Tuning :
-
-Transfer learning allows us to train deep networks using significantly less data then we would need if we had to train from scratch. With transfer learning, we are in effect transferring the “knowledge” that a model has learned from a previous task, to our current one.
-
-Transfer learning has been consistently proven to boost model accuracy and reduce require training time. Less data, less time, more accuracy.
-
-Here, we will be using VGG-16 neural network architecture.
-
-## VGG-16 Architecture : 
-
-The VGG-16 model is a 16-layer (convolution and fully connected) network built on the ImageNet database. 
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/vgg_16_two.png)
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/VGG-16_one.png)
-
-Here, in the fine tuning step we will freeze the initial pre-trained layers having the weights learned from the imagenet dataset, however the last few convolution-pooling layers will remain unfreezed, allowing us to train them on our dataset. Note that, we will be designing a custom head as the original VGG aimed to predict out of 1000 classes, whereas we only have four.
-
-Also, it's been proven that adding a Global Average Pooling layer before the fully connected layer imroves the accuracy of the model considerably.
-
-**Global Average Pooling. Global Average Pooling is an operation that calculates the average output of each feature map in the previous layer. This fairly simple operation reduces the data significantly and prepares the model for the final classification layer**.
-
-* **Bottleneck features** : The last activation feature map in the VGG-16 model (output from block5_pool) gives us the bottleneck features, which can then be flattened and fed to a fully connected deep neural network classifier. We flatten the bottleneck features in the vgg_model object to make them ready to be fed to our fully connected classifier. *A way to save time in model training is to use this model and extract out all the features from our training and validation datasets and then feed them as inputs to our classifier*.
-
-# (VIII) Results : 
-
-We trained only on 100 epochs to visualize the trends in our loss and accuracy. *Following trends were observed for just 100 epochs. The network can be further trained for more accuracy.* 
-
-**Here we achieved the accuracy close to 90%**.
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/res.png)
-
-# Thank you for your time to read this far ~~
-
-* Contact : *bauraiaditya7@gmail.com* 
-
-![](https://github.com/CodingWitcher/Leaf_Diseases/blob/master/images_for_readme/ty.webp)
 
 
 
