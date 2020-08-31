@@ -23,6 +23,9 @@ trends’ information, thus resulting in effective profits
 # (II) Dataset Used : 
 
 Data Set of Google, AMD and Tesla was used.
+Tesla - 2010-2017(predicted for a 20 day period)
+AMD - 2009-2018(predicted for a 20 day period)
+Google - 2012-2016(predicted for a 20 day period)
 
 # (III) Libraries used :
 
